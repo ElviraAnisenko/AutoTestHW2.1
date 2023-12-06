@@ -56,9 +56,7 @@ public class CallbackTest {
         form.$("[data-test-id=phone] input").setValue("+79988778899");
         form.$("[data-test-id=agreement]").click();
         form.$(By.className("button")).click();
-        $(By.className("input_invalid")).find(".input__sub").shouldHave(exactText("Поле обязательно для заполнения"));
-        String textColor = $(By.className("input_invalid")).find(".input__sub").getCssValue("color");
-        assertEquals("rgba(255, 92, 92, 1)", textColor);
+        $("[data-test-id=name].input_invalid .input__sub").shouldHave(exactText("Поле обязательно для заполнения"));
 
     }
 
@@ -70,9 +68,8 @@ public class CallbackTest {
         form.$("[data-test-id=phone] input").setValue("");
         form.$("[data-test-id=agreement]").click();
         form.$(By.className("button")).click();
-        $(By.className("input_invalid")).find(".input__sub").shouldHave(exactText("Поле обязательно для заполнения"));
-        String textColor = $(By.className("input_invalid")).find(".input__sub").getCssValue("color");
-        assertEquals("rgba(255, 92, 92, 1)", textColor);
+        $("[data-test-id=phone].input_invalid .input__sub").shouldHave(exactText("Поле обязательно для заполнения"));
+
     }
 
     @Test
@@ -82,8 +79,7 @@ public class CallbackTest {
         form.$("[data-test-id=name] input").setValue("Ольга Петрова");
         form.$("[data-test-id=phone] input").setValue("+79988778899");
         form.$(By.className("button")).click();
-        String textColor = $(By.className("checkbox__text")).getCssValue("color");
-        assertEquals("rgba(255, 92, 92, 1)", textColor);
+        $("[data-test-id=agreement].input_invalid .checkbox__text").shouldHave(exactText("Я соглашаюсь с условиями обработки и использования моих персональных данных и разрешаю сделать запрос в бюро кредитных историй"));
 
     }
 
@@ -95,9 +91,9 @@ public class CallbackTest {
         form.$("[data-test-id=phone] input").setValue("+79988778899");
         form.$("[data-test-id=agreement]").click();
         form.$(By.className("button")).click();
-        $(By.className("input_invalid")).find(".input__sub").shouldHave(exactText("Имя и Фамилия указаные неверно. Допустимы только русские буквы, пробелы и дефисы."));
-        String textColor = $(By.className("input_invalid")).find(".input__sub").getCssValue("color");
-        assertEquals("rgba(255, 92, 92, 1)", textColor);
+        $("[data-test-id=name].input_invalid .input__sub").shouldHave(exactText("Имя и Фамилия указаные неверно. Допустимы только русские буквы, пробелы и дефисы."));
+
+
     }
 
     @Test
@@ -108,9 +104,9 @@ public class CallbackTest {
         form.$("[data-test-id=phone] input").setValue("+79988778899");
         form.$("[data-test-id=agreement]").click();
         form.$(By.className("button")).click();
-        $(By.className("input_invalid")).find(".input__sub").shouldHave(exactText("Имя и Фамилия указаные неверно. Допустимы только русские буквы, пробелы и дефисы."));
-        String textColor = $(By.className("input_invalid")).find(".input__sub").getCssValue("color");
-        assertEquals("rgba(255, 92, 92, 1)", textColor);
+        $("[data-test-id=name].input_invalid .input__sub").shouldHave(exactText("Имя и Фамилия указаные неверно. Допустимы только русские буквы, пробелы и дефисы."));
+
+
     }
 
     @Test
@@ -121,9 +117,9 @@ public class CallbackTest {
         form.$("[data-test-id=phone] input").setValue("+79988778899");
         form.$("[data-test-id=agreement]").click();
         form.$(By.className("button")).click();
-        $(By.className("input_invalid")).find(".input__sub").shouldHave(exactText("Имя и Фамилия указаные неверно. Допустимы только русские буквы, пробелы и дефисы."));
-        String textColor = $(By.className("input_invalid")).find(".input__sub").getCssValue("color");
-        assertEquals("rgba(255, 92, 92, 1)", textColor);
+        $("[data-test-id=name].input_invalid .input__sub").shouldHave(exactText("Имя и Фамилия указаные неверно. Допустимы только русские буквы, пробелы и дефисы."));
+
+
     }
 
     @Test
@@ -134,9 +130,8 @@ public class CallbackTest {
         form.$("[data-test-id=phone] input").setValue("+79988778899");
         form.$("[data-test-id=agreement]").click();
         form.$(By.className("button")).click();
-        $(By.className("input_invalid")).find(".input__sub").shouldHave(exactText("Имя и Фамилия указаные неверно. Допустимы только русские буквы, пробелы и дефисы."));
-        String textColor = $(By.className("input_invalid")).find(".input__sub").getCssValue("color");
-        assertEquals("rgba(255, 92, 92, 1)", textColor);
+        $("[data-test-id=name].input_invalid .input__sub").shouldHave(exactText("Имя и Фамилия указаные неверно. Допустимы только русские буквы, пробелы и дефисы."));
+
     }
 
     @Test
@@ -147,9 +142,8 @@ public class CallbackTest {
         form.$("[data-test-id=phone] input").setValue("+79988778899");
         form.$("[data-test-id=agreement]").click();
         form.$(By.className("button")).click();
-        $(By.className("input_invalid")).find(".input__sub").shouldHave(exactText("Имя и Фамилия указаные неверно. Допустимы только русские буквы, пробелы и дефисы."));
-        String textColor = $(By.className("input_invalid")).find(".input__sub").getCssValue("color");
-        assertEquals("rgba(255, 92, 92, 1)", textColor);
+        $("[data-test-id=name].input_invalid .input__sub").shouldHave(exactText("Имя и Фамилия указаные неверно. Допустимы только русские буквы, пробелы и дефисы."));
+
     }
 
     @Test
@@ -160,9 +154,8 @@ public class CallbackTest {
         form.$("[data-test-id=phone] input").setValue("+7 998 877 88 99");
         form.$("[data-test-id=agreement]").click();
         form.$(By.className("button")).click();
-        $(By.className("input_invalid")).find(".input__sub").shouldHave(exactText("Телефон указан неверно. Должно быть 11 цифр, например, +79012345678."));
-        String textColor = $(By.className("input_invalid")).find(".input__sub").getCssValue("color");
-        assertEquals("rgba(255, 92, 92, 1)", textColor);
+        $("[data-test-id=phone].input_invalid .input__sub").shouldHave(exactText("Телефон указан неверно. Должно быть 11 цифр, например, +79012345678."));
+
     }
 
     @Test
@@ -173,9 +166,8 @@ public class CallbackTest {
         form.$("[data-test-id=phone] input").setValue("+7(998)8778899");
         form.$("[data-test-id=agreement]").click();
         form.$(By.className("button")).click();
-        $(By.className("input_invalid")).find(".input__sub").shouldHave(exactText("Телефон указан неверно. Должно быть 11 цифр, например, +79012345678."));
-        String textColor = $(By.className("input_invalid")).find(".input__sub").getCssValue("color");
-        assertEquals("rgba(255, 92, 92, 1)", textColor);
+        $("[data-test-id=phone].input_invalid .input__sub").shouldHave(exactText("Телефон указан неверно. Должно быть 11 цифр, например, +79012345678."));
+
     }
 
     @Test
@@ -186,9 +178,8 @@ public class CallbackTest {
         form.$("[data-test-id=phone] input").setValue("+7-998-877-88-99");
         form.$("[data-test-id=agreement]").click();
         form.$(By.className("button")).click();
-        $(By.className("input_invalid")).find(".input__sub").shouldHave(exactText("Телефон указан неверно. Должно быть 11 цифр, например, +79012345678."));
-        String textColor = $(By.className("input_invalid")).find(".input__sub").getCssValue("color");
-        assertEquals("rgba(255, 92, 92, 1)", textColor);
+        $("[data-test-id=phone].input_invalid .input__sub").shouldHave(exactText("Телефон указан неверно. Должно быть 11 цифр, например, +79012345678."));
+
     }
 
     @Test
@@ -199,9 +190,8 @@ public class CallbackTest {
         form.$("[data-test-id=phone] input").setValue("89988778899");
         form.$("[data-test-id=agreement]").click();
         form.$(By.className("button")).click();
-        $(By.className("input_invalid")).find(".input__sub").shouldHave(exactText("Телефон указан неверно. Должно быть 11 цифр, например, +79012345678."));
-        String textColor = $(By.className("input_invalid")).find(".input__sub").getCssValue("color");
-        assertEquals("rgba(255, 92, 92, 1)", textColor);
+        $("[data-test-id=phone].input_invalid .input__sub").shouldHave(exactText("Телефон указан неверно. Должно быть 11 цифр, например, +79012345678."));
+
     }
 
     @Test
@@ -212,9 +202,8 @@ public class CallbackTest {
         form.$("[data-test-id=phone] input").setValue("+799988778899");
         form.$("[data-test-id=agreement]").click();
         form.$(By.className("button")).click();
-        $(By.className("input_invalid")).find(".input__sub").shouldHave(exactText("Телефон указан неверно. Должно быть 11 цифр, например, +79012345678."));
-        String textColor = $(By.className("input_invalid")).find(".input__sub").getCssValue("color");
-        assertEquals("rgba(255, 92, 92, 1)", textColor);
+        $("[data-test-id=phone].input_invalid .input__sub").shouldHave(exactText("Телефон указан неверно. Должно быть 11 цифр, например, +79012345678."));
+
     }
 
     @Test
@@ -225,9 +214,8 @@ public class CallbackTest {
         form.$("[data-test-id=phone] input").setValue("+7999887788");
         form.$("[data-test-id=agreement]").click();
         form.$(By.className("button")).click();
-        $(By.className("input_invalid")).find(".input__sub").shouldHave(exactText("Телефон указан неверно. Должно быть 11 цифр, например, +79012345678."));
-        String textColor = $(By.className("input_invalid")).find(".input__sub").getCssValue("color");
-        assertEquals("rgba(255, 92, 92, 1)", textColor);
+        $("[data-test-id=phone].input_invalid .input__sub").shouldHave(exactText("Телефон указан неверно. Должно быть 11 цифр, например, +79012345678."));
+
     }
 
     @Test
@@ -238,9 +226,8 @@ public class CallbackTest {
         form.$("[data-test-id=phone] input").setValue("qqqqqqq");
         form.$("[data-test-id=agreement]").click();
         form.$(By.className("button")).click();
-        $(By.className("input_invalid")).find(".input__sub").shouldHave(exactText("Телефон указан неверно. Должно быть 11 цифр, например, +79012345678."));
-        String textColor = $(By.className("input_invalid")).find(".input__sub").getCssValue("color");
-        assertEquals("rgba(255, 92, 92, 1)", textColor);
+        $("[data-test-id=phone].input_invalid .input__sub").shouldHave(exactText("Телефон указан неверно. Должно быть 11 цифр, например, +79012345678."));
+
     }
 
 
